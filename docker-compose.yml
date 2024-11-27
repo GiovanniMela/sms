@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "${PORT:-3000}:3000"
