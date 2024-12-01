@@ -10,7 +10,7 @@ build:
 
 db_setup:
 	docker compose run --rm web bundle exec rails db:create db:migrate
-	RAILS_ENV=test docker compose run --rm web bundle exec db:create db:migrate
+	RAILS_ENV=test docker compose run --rm web bundle exec rails db:create db:migrate
 
 db_reset:
 	docker compose run --rm web bundle exec rails db:migrate:reset
