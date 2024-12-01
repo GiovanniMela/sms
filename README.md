@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This services consumes a (mostly longer) text message and splits it into smaller parts for later sending to another client that can only consume smaller parts.
 
-Things you may want to cover:
+## Endpoint
+This services provides one **POST** endpoint reachable under the following resource:
 
-* Ruby version
+* `/api/v1/send_messages`
 
-* System dependencies
+The endpoint accepts the following **json** object:
 
-* Configuration
+* `message: "String"`
 
-* Database creation
+## Dev setup
+The setup assumes that on your development machine a recent version of `docker` and `docker-compose` is installed and configured.
 
-* Database initialization
+* Initially run `make setup`
 
-* How to run the test suite
+* Last but not least to start the service run `make server` to start a server listening on PORT 3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please check out `Makefile` for other commands.
